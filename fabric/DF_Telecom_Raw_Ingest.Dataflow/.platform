@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "DF_Telecom_Raw_Ingest"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "8ea7bacb-580b-9d7c-464f-74d7d7f10051"
+  }
+}

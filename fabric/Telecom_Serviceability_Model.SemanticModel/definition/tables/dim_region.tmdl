@@ -1,0 +1,78 @@
+table dim_region
+	lineageTag: b11f1fbb-ad3e-41fd-b699-8b5250ce2c51
+	sourceLineageTag: [dbo].[dim_region]
+
+	column region_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d8d480fc-e3c1-461d-a2aa-321cabd58fa4
+		sourceLineageTag: region_id
+		summarizeBy: none
+		sourceColumn: region_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column region_name
+		dataType: string
+		lineageTag: 845e8546-e34e-4c83-88c7-c70ad24d3e9f
+		sourceLineageTag: region_name
+		summarizeBy: none
+		sourceColumn: region_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column division
+		dataType: string
+		lineageTag: 8ef0dd48-a51a-4b6d-b263-4b49585d92f2
+		sourceLineageTag: division
+		summarizeBy: none
+		sourceColumn: division
+
+		annotation SummarizationSetBy = Automatic
+
+	column state
+		dataType: string
+		lineageTag: 37c9fa15-3632-4288-8cfd-5929326e83fb
+		sourceLineageTag: state
+		summarizeBy: none
+		sourceColumn: state
+
+		annotation SummarizationSetBy = Automatic
+
+	column market_type
+		dataType: string
+		lineageTag: 21c8d6af-ae0c-4aed-80a8-fbe15108b84c
+		sourceLineageTag: market_type
+		summarizeBy: none
+		sourceColumn: market_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column territory_manager
+		dataType: string
+		lineageTag: 36c9f7e7-e54d-46c1-938d-037b4f01c4fd
+		sourceLineageTag: territory_manager
+		summarizeBy: none
+		sourceColumn: territory_manager
+
+		annotation SummarizationSetBy = Automatic
+
+	column headend_location
+		dataType: string
+		lineageTag: 94a46f45-352f-4d1f-bca5-6cb81d516e84
+		sourceLineageTag: headend_location
+		summarizeBy: none
+		sourceColumn: headend_location
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_region = entity
+		mode: directLake
+		source
+			entityName: dim_region
+			schemaName: dbo
+			expressionSource: 'DirectLake - Telecom_Serviceability_Curated'
+

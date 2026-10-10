@@ -1,0 +1,69 @@
+table dim_product
+	lineageTag: cc61ceb4-dde0-49dd-ac52-7c6234c98e35
+	sourceLineageTag: [dbo].[dim_product]
+
+	column product_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 201d0629-d871-43f7-a9de-c293264089b0
+		sourceLineageTag: product_id
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_name
+		dataType: string
+		lineageTag: 55946a2b-2988-40a6-af98-4795a71d84c5
+		sourceLineageTag: product_name
+		summarizeBy: none
+		sourceColumn: product_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_category
+		dataType: string
+		lineageTag: 86053de5-0976-4680-b5f4-d0b427dce085
+		sourceLineageTag: product_category
+		summarizeBy: none
+		sourceColumn: product_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column bundle_type
+		dataType: string
+		lineageTag: e0a00c12-08d4-4f2b-82ae-16aeca4f7c04
+		sourceLineageTag: bundle_type
+		summarizeBy: none
+		sourceColumn: bundle_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column monthly_price_usd
+		dataType: double
+		lineageTag: 29a1fa97-b82d-4f00-af4e-b5ebec724c57
+		sourceLineageTag: monthly_price_usd
+		summarizeBy: none
+		sourceColumn: monthly_price_usd
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column is_active
+		dataType: int64
+		formatString: 0
+		lineageTag: 90392cae-84db-4357-9452-5b8b88b9bca0
+		sourceLineageTag: is_active
+		summarizeBy: none
+		sourceColumn: is_active
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_product = entity
+		mode: directLake
+		source
+			entityName: dim_product
+			schemaName: dbo
+			expressionSource: 'DirectLake - Telecom_Serviceability_Curated'
+

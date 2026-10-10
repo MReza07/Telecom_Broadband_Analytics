@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Telecom_Serviceability_Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "927baa2b-7038-9cf1-4181-f1254ab646a9"
+  }
+}

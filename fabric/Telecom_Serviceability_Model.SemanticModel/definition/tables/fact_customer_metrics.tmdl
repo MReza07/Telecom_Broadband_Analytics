@@ -1,0 +1,141 @@
+table fact_customer_metrics
+	lineageTag: d3051a1a-b8cc-4bf8-ac4e-cb8d0bbc5d1d
+	sourceLineageTag: [dbo].[fact_customer_metrics]
+
+	column metric_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 4ac55b19-a3e4-406b-9efa-c8de5e3b0a7f
+		sourceLineageTag: metric_id
+		summarizeBy: sum
+		sourceColumn: metric_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column region_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e4ed134e-9870-45c0-9cca-0c2c4c87bfe7
+		sourceLineageTag: region_id
+		summarizeBy: none
+		sourceColumn: region_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 35c3f06c-a66f-4ed1-b08c-58e423ff3aae
+		sourceLineageTag: date_id
+		summarizeBy: none
+		sourceColumn: date_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: dbb7c368-a0af-44c2-b99b-80ccc716732e
+		sourceLineageTag: product_id
+		summarizeBy: none
+		sourceColumn: product_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_subscribers
+		dataType: int64
+		formatString: 0
+		lineageTag: c69ff65e-ff2c-4d89-877c-056cc8b253c1
+		sourceLineageTag: total_subscribers
+		summarizeBy: sum
+		sourceColumn: total_subscribers
+
+		annotation SummarizationSetBy = Automatic
+
+	column new_subscribers
+		dataType: int64
+		formatString: 0
+		lineageTag: 908f7cdf-a117-4e0c-bded-111d88687f58
+		sourceLineageTag: new_subscribers
+		summarizeBy: sum
+		sourceColumn: new_subscribers
+
+		annotation SummarizationSetBy = Automatic
+
+	column churned_subscribers
+		dataType: int64
+		formatString: 0
+		lineageTag: 38ac2b5c-4774-4779-a6d6-b58aaa84ace8
+		sourceLineageTag: churned_subscribers
+		summarizeBy: sum
+		sourceColumn: churned_subscribers
+
+		annotation SummarizationSetBy = Automatic
+
+	column churn_rate_pct
+		dataType: double
+		lineageTag: c319cae7-f314-405e-9b72-08c3da3f6c43
+		sourceLineageTag: churn_rate_pct
+		summarizeBy: sum
+		sourceColumn: churn_rate_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column nps_score
+		dataType: int64
+		formatString: 0
+		lineageTag: b7c7b8fb-f6b3-454d-a5fb-24de13760c47
+		sourceLineageTag: nps_score
+		summarizeBy: sum
+		sourceColumn: nps_score
+
+		annotation SummarizationSetBy = Automatic
+
+	column csat_score
+		dataType: double
+		lineageTag: e69949e7-5658-4135-8687-9078bbba1521
+		sourceLineageTag: csat_score
+		summarizeBy: sum
+		sourceColumn: csat_score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column arpu_usd
+		dataType: double
+		lineageTag: f0ef65e2-7e31-46e1-8915-3ecaad4f4420
+		sourceLineageTag: arpu_usd
+		summarizeBy: sum
+		sourceColumn: arpu_usd
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column revenue_usd
+		dataType: double
+		lineageTag: a6d227b7-fcde-4141-8db3-eab5d69ab8b7
+		sourceLineageTag: revenue_usd
+		summarizeBy: sum
+		sourceColumn: revenue_usd
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition fact_customer_metrics = entity
+		mode: directLake
+		source
+			entityName: fact_customer_metrics
+			schemaName: dbo
+			expressionSource: 'DirectLake - Telecom_Serviceability_Curated'
+

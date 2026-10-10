@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "Telecom_Serviceability_Curated"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "ff904b30-b8c9-a6e0-4ad1-c94eafb9f891"
+  }
+}

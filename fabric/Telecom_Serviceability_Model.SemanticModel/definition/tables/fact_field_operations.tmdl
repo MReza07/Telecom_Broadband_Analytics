@@ -1,0 +1,120 @@
+table fact_field_operations
+	lineageTag: 08e86ed5-9ae2-4b58-8e7a-e970b4a72ab2
+	sourceLineageTag: [dbo].[fact_field_operations]
+
+	column work_order_id
+		dataType: int64
+		formatString: 0
+		lineageTag: bf6e8b20-c30c-4ac2-b3f2-362480e7c173
+		sourceLineageTag: work_order_id
+		summarizeBy: sum
+		sourceColumn: work_order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column region_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 69fbbfce-3929-4d01-9bca-a9e5b21bcad9
+		sourceLineageTag: region_id
+		summarizeBy: none
+		sourceColumn: region_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 57161066-4424-4786-a09a-25aec208f53d
+		sourceLineageTag: date_id
+		summarizeBy: none
+		sourceColumn: date_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_type
+		dataType: string
+		lineageTag: 27be9106-0355-437f-8b9a-e281d18b5c25
+		sourceLineageTag: order_type
+		summarizeBy: none
+		sourceColumn: order_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column status
+		dataType: string
+		lineageTag: bee1fe07-4c3d-44f9-8727-99580d022ea8
+		sourceLineageTag: status
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column technician_id
+		dataType: int64
+		formatString: 0
+		lineageTag: bded8f57-d84e-4a85-8525-1e55078d6e4e
+		sourceLineageTag: technician_id
+		summarizeBy: sum
+		sourceColumn: technician_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column scheduled_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a14eb626-59d5-4377-8799-425c3bf413c7
+		sourceLineageTag: scheduled_date
+		summarizeBy: none
+		sourceColumn: scheduled_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column completed_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 483fce3d-1b4e-4112-ac0a-fc909e1cf69d
+		sourceLineageTag: completed_date
+		summarizeBy: none
+		sourceColumn: completed_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_time_fix_flag
+		dataType: int64
+		formatString: 0
+		lineageTag: f3e3f633-1cef-4bf2-9a47-f82a28c39d31
+		sourceLineageTag: first_time_fix_flag
+		summarizeBy: sum
+		sourceColumn: first_time_fix_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column truck_rolls
+		dataType: int64
+		formatString: 0
+		lineageTag: c702312c-2688-494a-bbe4-bf4119da1bac
+		sourceLineageTag: truck_rolls
+		summarizeBy: sum
+		sourceColumn: truck_rolls
+
+		annotation SummarizationSetBy = Automatic
+
+	column job_duration_hrs
+		dataType: double
+		lineageTag: 92494cfb-0e0f-4d53-9a4f-5a967fca56e9
+		sourceLineageTag: job_duration_hrs
+		summarizeBy: sum
+		sourceColumn: job_duration_hrs
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition fact_field_operations = entity
+		mode: directLake
+		source
+			entityName: fact_field_operations
+			schemaName: dbo
+			expressionSource: 'DirectLake - Telecom_Serviceability_Curated'
+

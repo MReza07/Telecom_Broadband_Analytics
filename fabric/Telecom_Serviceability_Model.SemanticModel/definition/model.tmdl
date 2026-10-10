@@ -1,0 +1,24 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["DirectLake - Telecom_Serviceability_Curated"]
+
+annotation PBI_ProTooling = ["DirectLakeOnOneLakeInWeb","WebModelingEdit"]
+
+ref table dim_date
+ref table dim_product
+ref table dim_region
+ref table fact_customer_metrics
+ref table fact_field_operations
+ref table fact_network_kpis
+ref table fact_serviceability
+ref table _measure
+ref table measure1
+

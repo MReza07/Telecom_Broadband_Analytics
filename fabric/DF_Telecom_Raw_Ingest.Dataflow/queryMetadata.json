@@ -1,0 +1,94 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {
+    "allowModernEvaluationEngine": true
+  },
+  "name": "DF_Telecom_Raw_Ingest",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "gatewayObjectId": "e2bf3033-d188-4063-9cd6-a421d5c4501d",
+  "queriesMetadata": {
+    "customer_metrics": {
+      "queryId": "44d50fdd-d4f0-4641-be6a-b0aec96b2dd7",
+      "queryName": "customer_metrics"
+    },
+    "date": {
+      "queryId": "c15a53cd-948a-4a12-8941-a32d738f3035",
+      "queryName": "date",
+      "loadEnabled": false
+    },
+    "field_operations": {
+      "queryId": "64630bc4-b4cf-4cbd-a3c5-3bf93e25a497",
+      "queryName": "field_operations",
+      "loadEnabled": false
+    },
+    "network_kpis": {
+      "queryId": "fcfa0a9d-c24d-48de-b1b5-1494ec50609f",
+      "queryName": "network_kpis",
+      "loadEnabled": false
+    },
+    "product": {
+      "queryId": "826fe3d3-0477-45af-9b3b-afc4187eb3d6",
+      "queryName": "product",
+      "loadEnabled": false
+    },
+    "region": {
+      "queryId": "e31dce51-430f-44d4-98cf-f016983bbf35",
+      "queryName": "region",
+      "loadEnabled": false
+    },
+    "serviceability": {
+      "queryId": "a99b6988-b0af-45c5-9a59-fd68218ba391",
+      "queryName": "serviceability",
+      "loadEnabled": false
+    },
+    "date_DataDestination": {
+      "queryId": "987763a2-3dde-40cc-a94c-ed1bb0b5f0a5",
+      "queryName": "date_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "field_operations_DataDestination": {
+      "queryId": "bc9ca7e9-8ff5-4d02-873e-c58b52463ec2",
+      "queryName": "field_operations_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "network_kpis_DataDestination": {
+      "queryId": "91904b20-840b-4ad0-8985-0c6fb52e1382",
+      "queryName": "network_kpis_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "product_DataDestination": {
+      "queryId": "d793abba-1583-4f33-975f-7e0ec6726d5c",
+      "queryName": "product_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "region_DataDestination": {
+      "queryId": "87824a6f-8ac5-4169-9938-29e9885a9905",
+      "queryName": "region_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "serviceability_DataDestination": {
+      "queryId": "79c50a1a-2946-485c-a37b-4551c6a9b23f",
+      "queryName": "serviceability_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "D:\\Telecom_data\\New folder",
+      "kind": "Folder",
+      "connectionId": "{\"ClusterId\":\"e2bf3033-d188-4063-9cd6-a421d5c4501d\",\"DatasourceId\":\"85ec210a-8bdc-4000-8f63-41ec6c28935c\"}"
+    },
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"e2bf3033-d188-4063-9cd6-a421d5c4501d\",\"DatasourceId\":\"a5911122-2baf-462b-8600-4598813c7c7a\"}"
+    }
+  ]
+}

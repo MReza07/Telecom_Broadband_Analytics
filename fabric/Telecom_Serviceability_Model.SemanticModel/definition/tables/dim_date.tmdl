@@ -1,0 +1,110 @@
+table dim_date
+	lineageTag: 20e87cf6-530e-4cc4-bda7-192fff24d5cc
+	sourceLineageTag: [dbo].[dim_date]
+	dataCategory: Time
+
+	column date_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 9b6a1714-cba1-431b-a8db-653bb79e3f2c
+		sourceLineageTag: date_id
+		summarizeBy: none
+		sourceColumn: date_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column full_date
+		dataType: dateTime
+		isKey
+		formatString: General Date
+		lineageTag: 3be79c62-0455-4eaa-ac3b-9615b3a6d878
+		sourceLineageTag: full_date
+		summarizeBy: none
+		sourceColumn: full_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: f579bd92-554d-439f-a9bb-2fead4cbc4fe
+		sourceLineageTag: year
+		summarizeBy: sum
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 2cb1a85d-2430-4a2f-b698-930f9bb81648
+		sourceLineageTag: quarter
+		summarizeBy: sum
+		sourceColumn: quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_num
+		dataType: int64
+		formatString: 0
+		lineageTag: dc0d99a7-9416-4211-9856-52f53b473381
+		sourceLineageTag: month_num
+		summarizeBy: sum
+		sourceColumn: month_num
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_name
+		dataType: string
+		lineageTag: c206bb17-1903-44c0-8a74-a93fe970a54a
+		sourceLineageTag: month_name
+		summarizeBy: none
+		sourceColumn: month_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column week_num
+		dataType: int64
+		formatString: 0
+		lineageTag: d1c1832d-1ef4-4a06-9259-20921e765ce0
+		sourceLineageTag: week_num
+		summarizeBy: sum
+		sourceColumn: week_num
+
+		annotation SummarizationSetBy = Automatic
+
+	column day_of_week
+		dataType: string
+		lineageTag: e06c7737-d623-4bf1-891b-491572b1fc3e
+		sourceLineageTag: day_of_week
+		summarizeBy: none
+		sourceColumn: day_of_week
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_weekend
+		dataType: int64
+		formatString: 0
+		lineageTag: 16abf7c3-5c46-4c1e-9790-9868eb43477d
+		sourceLineageTag: is_weekend
+		summarizeBy: sum
+		sourceColumn: is_weekend
+
+		annotation SummarizationSetBy = Automatic
+
+	column fiscal_period
+		dataType: string
+		lineageTag: e231ed64-074a-46b8-a985-3c6e9d5e3c7f
+		sourceLineageTag: fiscal_period
+		summarizeBy: none
+		sourceColumn: fiscal_period
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_date = entity
+		mode: directLake
+		source
+			entityName: dim_date
+			schemaName: dbo
+			expressionSource: 'DirectLake - Telecom_Serviceability_Curated'
+

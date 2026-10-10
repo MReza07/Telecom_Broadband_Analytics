@@ -1,0 +1,36 @@
+relationship 64979d17-500a-83ce-dd2d-15a01b4cf326
+	fromColumn: fact_field_operations.date_id
+	toColumn: dim_date.date_id
+
+relationship d02b0c1a-9ac7-d040-5d61-37a7315084a5
+	fromColumn: fact_customer_metrics.date_id
+	toColumn: dim_date.date_id
+
+relationship a09b342f-0e9d-c1cb-2fa7-ea81848b93c5
+	fromColumn: fact_customer_metrics.product_id
+	toColumn: dim_product.product_id
+
+relationship ab40193e-a61a-9db8-e27f-fbb539dc649d
+	fromColumn: fact_customer_metrics.region_id
+	toColumn: dim_region.region_id
+
+relationship 3d7fe4d3-c2fa-771a-0005-744dd7b4727a
+	fromColumn: fact_network_kpis.date_id
+	toColumn: dim_date.date_id
+
+relationship 809361f9-fc42-ba6d-4c06-1007433e090d
+	fromColumn: fact_network_kpis.region_id
+	toColumn: dim_region.region_id
+
+relationship 72881eb3-fcfe-f583-8b9c-87cd6ecdec4c
+	fromColumn: fact_serviceability.region_id
+	toColumn: dim_region.region_id
+
+relationship 5e3ab541-6f81-f97d-ab1d-db336dfc9614
+	fromColumn: fact_field_operations.region_id
+	toColumn: dim_region.region_id
+
+relationship 096be633-c981-439b-3531-1cb5aa45d2e9
+	fromColumn: fact_serviceability.date_id
+	toColumn: dim_date.date_id
+

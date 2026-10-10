@@ -1,0 +1,157 @@
+table fact_serviceability
+	lineageTag: b84b7a51-783d-4cb6-98f7-3ee8979ae66d
+	sourceLineageTag: [dbo].[fact_serviceability]
+
+	column address_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 64a23fed-1ff8-4f24-9102-2a26fd17b247
+		sourceLineageTag: address_id
+		summarizeBy: sum
+		sourceColumn: address_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column region_id
+		dataType: int64
+		formatString: 0
+		lineageTag: c2065d57-195c-4430-a9a1-738a401abc4f
+		sourceLineageTag: region_id
+		summarizeBy: none
+		sourceColumn: region_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_id
+		dataType: int64
+		formatString: 0
+		lineageTag: e7708bf6-8583-4b9c-a541-5ab466a63373
+		sourceLineageTag: date_id
+		summarizeBy: none
+		sourceColumn: date_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column street_address
+		dataType: string
+		lineageTag: c072438d-af55-40dd-be07-2af046be921e
+		sourceLineageTag: street_address
+		summarizeBy: none
+		sourceColumn: street_address
+
+		annotation SummarizationSetBy = Automatic
+
+	column city
+		dataType: string
+		lineageTag: a82a4918-c7c3-47a3-b61f-6aa1cbf8fa6c
+		sourceLineageTag: city
+		summarizeBy: none
+		sourceColumn: city
+
+		annotation SummarizationSetBy = Automatic
+
+	column state
+		dataType: string
+		lineageTag: 6f591d13-ade4-49a9-b62a-346e9cefcc32
+		sourceLineageTag: state
+		summarizeBy: none
+		sourceColumn: state
+
+		annotation SummarizationSetBy = Automatic
+
+	column zip_code
+		dataType: int64
+		formatString: 0
+		lineageTag: cd6e9045-81b2-4317-ac61-1c9fccbd9e78
+		sourceLineageTag: zip_code
+		summarizeBy: sum
+		sourceColumn: zip_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column serviceable_flag
+		dataType: int64
+		formatString: 0
+		lineageTag: 552fcd3c-2d1e-45f5-8a24-0c752a7ae2b3
+		sourceLineageTag: serviceable_flag
+		summarizeBy: sum
+		sourceColumn: serviceable_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column service_type
+		dataType: string
+		lineageTag: ab016a5f-ffe0-4be7-91b6-fe8a88c7838b
+		sourceLineageTag: service_type
+		summarizeBy: none
+		sourceColumn: service_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column max_speed_mbps
+		dataType: int64
+		formatString: 0
+		lineageTag: 5a506e8a-9de7-49f9-9f26-d7d14333b078
+		sourceLineageTag: max_speed_mbps
+		summarizeBy: sum
+		sourceColumn: max_speed_mbps
+
+		annotation SummarizationSetBy = Automatic
+
+	column technology
+		dataType: string
+		lineageTag: a92f858f-e94f-408b-9186-8dc11be8213b
+		sourceLineageTag: technology
+		summarizeBy: none
+		sourceColumn: technology
+
+		annotation SummarizationSetBy = Automatic
+
+	column coverage_tier
+		dataType: string
+		lineageTag: 3692314c-2ccf-45bd-8710-75a712ffc20a
+		sourceLineageTag: coverage_tier
+		summarizeBy: none
+		sourceColumn: coverage_tier
+
+		annotation SummarizationSetBy = Automatic
+
+	column overbuild_flag
+		dataType: int64
+		formatString: 0
+		lineageTag: e1db1683-fd6a-409a-a89a-8c2cb9bbc1cf
+		sourceLineageTag: overbuild_flag
+		summarizeBy: sum
+		sourceColumn: overbuild_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column latitude
+		dataType: double
+		lineageTag: 1b457085-8fcc-44f0-9e50-cb89d2b092b7
+		sourceLineageTag: latitude
+		summarizeBy: sum
+		sourceColumn: latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column longitude
+		dataType: double
+		lineageTag: 188ec438-ce61-4da1-85b5-21cf85b00f89
+		sourceLineageTag: longitude
+		summarizeBy: sum
+		sourceColumn: longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition fact_serviceability = entity
+		mode: directLake
+		source
+			entityName: fact_serviceability
+			schemaName: dbo
+			expressionSource: 'DirectLake - Telecom_Serviceability_Curated'
+

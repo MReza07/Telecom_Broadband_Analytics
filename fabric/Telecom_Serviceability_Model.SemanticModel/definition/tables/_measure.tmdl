@@ -1,0 +1,18 @@
+table _measure
+	lineageTag: fd33823d-bcf9-436b-9c0f-091b14b2dfa0
+
+	column x
+		formatString: 0
+		lineageTag: 11654143-b798-495f-955b-0ed62ecead57
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [x]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _measure = calculated
+		mode: import
+		source = ROW("x", 1)
+
+	annotation PBI_Id = 2856d0f630c344e1a5b6dd020d2d22f5
+
